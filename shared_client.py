@@ -7,7 +7,7 @@ from config import API_ID, API_HASH, BOT_TOKEN, STRING
 from pyrogram import Client
 import sys
 
-client = TelegramClient("telethonbot", 33296024, "2ca6c382c66fa301a67997270836e933")
+client = TelegramClient("telethonbot", 33296024, "2ca6c382c66fa301a67997270836e933").start(bot_token="81152426997:AAFrhyosIgP8uekpZnjBCzd3Z9KmIMQA4I0")
 app = Client("pyrogrambot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 userbot = Client("4gbbot", api_id=API_ID, api_hash=API_HASH, session_string=STRING)
 
@@ -25,4 +25,5 @@ async def start_client():
     await app.start()
     print("Pyro App Started...")
     return client, app, userbot
+
 
